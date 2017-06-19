@@ -1,0 +1,802 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="randevuDataSet" targetNamespace="http://tempuri.org/randevuDataSet.xsd" xmlns:mstns="http://tempuri.org/randevuDataSet.xsd" xmlns="http://tempuri.org/randevuDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Database1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Database1ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.projee.Properties.Settings.GlobalReference.Default.Database1ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        durum.*, ceza.*, saglik_durum_aciklama.*, saglik_sorun.*, suclular.*, suclar.*
+FROM            ceza INNER JOIN
+                         suclar ON ceza.ceza_id = suclar.ceza_id INNER JOIN
+                         suclular ON suclar.suc_id = suclular.suc_id INNER JOIN
+                         saglik_durum_aciklama ON suclular.saglik_durum_aciklama_id = saglik_durum_aciklama.saglik_durum_aciklama_id INNER JOIN
+                         saglik_sorun ON suclular.saglik_sorun_id = saglik_sorun.saglik_sorun_id INNER JOIN
+                         durum ON suclular.durum_id = durum.durum_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="durum_id" DataSetColumn="durum_id" />
+              <Mapping SourceColumn="durum" DataSetColumn="durum" />
+              <Mapping SourceColumn="ceza_id" DataSetColumn="ceza_id" />
+              <Mapping SourceColumn="ceza_yil" DataSetColumn="ceza_yil" />
+              <Mapping SourceColumn="saglik_durum_aciklama_id" DataSetColumn="saglik_durum_aciklama_id" />
+              <Mapping SourceColumn="aciklama" DataSetColumn="aciklama" />
+              <Mapping SourceColumn="saglik_sorun_id" DataSetColumn="saglik_sorun_id" />
+              <Mapping SourceColumn="saglik_sorun_durum" DataSetColumn="saglik_sorun_durum" />
+              <Mapping SourceColumn="suclu_id" DataSetColumn="suclu_id" />
+              <Mapping SourceColumn="suclu_ad" DataSetColumn="suclu_ad" />
+              <Mapping SourceColumn="suclu_soyad" DataSetColumn="suclu_soyad" />
+              <Mapping SourceColumn="suclu_tc" DataSetColumn="suclu_tc" />
+              <Mapping SourceColumn="suclu_cinsiyet" DataSetColumn="suclu_cinsiyet" />
+              <Mapping SourceColumn="suclu_d_tarihi" DataSetColumn="suclu_d_tarihi" />
+              <Mapping SourceColumn="suc_id" DataSetColumn="suc_id" />
+              <Mapping SourceColumn="suc_ad" DataSetColumn="suc_ad" />
+              <Mapping SourceColumn="ceza_id1" DataSetColumn="ceza_id1" />
+              <Mapping SourceColumn="ceza_yil1" DataSetColumn="ceza_yil1" />
+              <Mapping SourceColumn="saglik_sorun_id1" DataSetColumn="saglik_sorun_id1" />
+              <Mapping SourceColumn="saglik_sorun_durum1" DataSetColumn="saglik_sorun_durum1" />
+              <Mapping SourceColumn="saglik_durum_aciklama_id1" DataSetColumn="saglik_durum_aciklama_id1" />
+              <Mapping SourceColumn="saglik_durum_aciklama" DataSetColumn="saglik_durum_aciklama" />
+              <Mapping SourceColumn="kan_grubu" DataSetColumn="kan_grubu" />
+              <Mapping SourceColumn="giris_tarih" DataSetColumn="giris_tarih" />
+              <Mapping SourceColumn="cikis_tarih" DataSetColumn="cikis_tarih" />
+              <Mapping SourceColumn="durum_id1" DataSetColumn="durum_id1" />
+              <Mapping SourceColumn="durum1" DataSetColumn="durum1" />
+              <Mapping SourceColumn="suc_id1" DataSetColumn="suc_id1" />
+              <Mapping SourceColumn="suc_ad1" DataSetColumn="suc_ad1" />
+              <Mapping SourceColumn="ceza_id2" DataSetColumn="ceza_id2" />
+              <Mapping SourceColumn="ceza_yil2" DataSetColumn="ceza_yil2" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cezaTableAdapter" GeneratorDataComponentClassName="cezaTableAdapter" Name="ceza" UserDataComponentName="cezaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.ceza" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[ceza] WHERE (([ceza_id] = @Original_ceza_id) AND ((@IsNull_ceza_yil = 1 AND [ceza_yil] IS NULL) OR ([ceza_yil] = @Original_ceza_yil)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[ceza] ([ceza_yil]) VALUES (@ceza_yil);
+SELECT ceza_id, ceza_yil FROM ceza WHERE (ceza_id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ceza_id, ceza_yil FROM dbo.ceza</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[ceza] SET [ceza_yil] = @ceza_yil WHERE (([ceza_id] = @Original_ceza_id) AND ((@IsNull_ceza_yil = 1 AND [ceza_yil] IS NULL) OR ([ceza_yil] = @Original_ceza_yil)));
+SELECT ceza_id, ceza_yil FROM ceza WHERE (ceza_id = @ceza_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ceza_id" ColumnName="ceza_id" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ceza_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ceza_id" DataSetColumn="ceza_id" />
+              <Mapping SourceColumn="ceza_yil" DataSetColumn="ceza_yil" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="durumTableAdapter" GeneratorDataComponentClassName="durumTableAdapter" Name="durum" UserDataComponentName="durumTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.durum" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[durum] WHERE (([durum_id] = @Original_durum_id) AND ((@IsNull_durum = 1 AND [durum] IS NULL) OR ([durum] = @Original_durum)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_durum_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="durum_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_durum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="durum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="durum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[durum] ([durum]) VALUES (@durum);
+SELECT durum_id, durum FROM durum WHERE (durum_id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="durum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT durum_id, durum FROM dbo.durum</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[durum] SET [durum] = @durum WHERE (([durum_id] = @Original_durum_id) AND ((@IsNull_durum = 1 AND [durum] IS NULL) OR ([durum] = @Original_durum)));
+SELECT durum_id, durum FROM durum WHERE (durum_id = @durum_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="durum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_durum_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="durum_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_durum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="durum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="durum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="durum_id" ColumnName="durum_id" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@durum_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="durum_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="durum_id" DataSetColumn="durum_id" />
+              <Mapping SourceColumn="durum" DataSetColumn="durum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="saglik_durum_aciklamaTableAdapter" GeneratorDataComponentClassName="saglik_durum_aciklamaTableAdapter" Name="saglik_durum_aciklama" UserDataComponentName="saglik_durum_aciklamaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.saglik_durum_aciklama" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[saglik_durum_aciklama] WHERE (([saglik_durum_aciklama_id] = @Original_saglik_durum_aciklama_id) AND ((@IsNull_aciklama = 1 AND [aciklama] IS NULL) OR ([aciklama] = @Original_aciklama)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_saglik_durum_aciklama_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_durum_aciklama_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_aciklama" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="aciklama" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_aciklama" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="aciklama" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[saglik_durum_aciklama] ([aciklama]) VALUES (@aciklama);
+SELECT saglik_durum_aciklama_id, aciklama FROM saglik_durum_aciklama WHERE (saglik_durum_aciklama_id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@aciklama" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="aciklama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT saglik_durum_aciklama_id, aciklama FROM dbo.saglik_durum_aciklama</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[saglik_durum_aciklama] SET [aciklama] = @aciklama WHERE (([saglik_durum_aciklama_id] = @Original_saglik_durum_aciklama_id) AND ((@IsNull_aciklama = 1 AND [aciklama] IS NULL) OR ([aciklama] = @Original_aciklama)));
+SELECT saglik_durum_aciklama_id, aciklama FROM saglik_durum_aciklama WHERE (saglik_durum_aciklama_id = @saglik_durum_aciklama_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@aciklama" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="aciklama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_saglik_durum_aciklama_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_durum_aciklama_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_aciklama" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="aciklama" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_aciklama" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="aciklama" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="saglik_durum_aciklama_id" ColumnName="saglik_durum_aciklama_id" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@saglik_durum_aciklama_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="saglik_durum_aciklama_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="saglik_durum_aciklama_id" DataSetColumn="saglik_durum_aciklama_id" />
+              <Mapping SourceColumn="aciklama" DataSetColumn="aciklama" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="saglik_sorunTableAdapter" GeneratorDataComponentClassName="saglik_sorunTableAdapter" Name="saglik_sorun" UserDataComponentName="saglik_sorunTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.saglik_sorun" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[saglik_sorun] WHERE (([saglik_sorun_id] = @Original_saglik_sorun_id) AND ((@IsNull_saglik_sorun_durum = 1 AND [saglik_sorun_durum] IS NULL) OR ([saglik_sorun_durum] = @Original_saglik_sorun_durum)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_saglik_sorun_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_sorun_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_saglik_sorun_durum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_sorun_durum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_saglik_sorun_durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="saglik_sorun_durum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[saglik_sorun] ([saglik_sorun_durum]) VALUES (@saglik_sorun_durum);
+SELECT saglik_sorun_id, saglik_sorun_durum FROM saglik_sorun WHERE (saglik_sorun_id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@saglik_sorun_durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="saglik_sorun_durum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT saglik_sorun_id, saglik_sorun_durum FROM dbo.saglik_sorun</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[saglik_sorun] SET [saglik_sorun_durum] = @saglik_sorun_durum WHERE (([saglik_sorun_id] = @Original_saglik_sorun_id) AND ((@IsNull_saglik_sorun_durum = 1 AND [saglik_sorun_durum] IS NULL) OR ([saglik_sorun_durum] = @Original_saglik_sorun_durum)));
+SELECT saglik_sorun_id, saglik_sorun_durum FROM saglik_sorun WHERE (saglik_sorun_id = @saglik_sorun_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@saglik_sorun_durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="saglik_sorun_durum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_saglik_sorun_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_sorun_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_saglik_sorun_durum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_sorun_durum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_saglik_sorun_durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="saglik_sorun_durum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="saglik_sorun_id" ColumnName="saglik_sorun_id" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@saglik_sorun_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="saglik_sorun_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="saglik_sorun_id" DataSetColumn="saglik_sorun_id" />
+              <Mapping SourceColumn="saglik_sorun_durum" DataSetColumn="saglik_sorun_durum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="suclarTableAdapter" GeneratorDataComponentClassName="suclarTableAdapter" Name="suclar" UserDataComponentName="suclarTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.suclar" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[suclar] WHERE (([suc_id] = @Original_suc_id) AND ((@IsNull_suc_ad = 1 AND [suc_ad] IS NULL) OR ([suc_ad] = @Original_suc_ad)) AND ((@IsNull_ceza_id = 1 AND [ceza_id] IS NULL) OR ([ceza_id] = @Original_ceza_id)) AND ((@IsNull_ceza_yil = 1 AND [ceza_yil] IS NULL) OR ([ceza_yil] = @Original_ceza_yil)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_suc_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suc_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suc_ad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suc_ad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_suc_ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suc_ad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[suclar] ([suc_ad], [ceza_id], [ceza_yil]) VALUES (@suc_ad, @ceza_id, @ceza_yil);
+SELECT suc_id, suc_ad, ceza_id, ceza_yil FROM suclar WHERE (suc_id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@suc_ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suc_ad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT suc_id, suc_ad, ceza_id, ceza_yil FROM dbo.suclar</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[suclar] SET [suc_ad] = @suc_ad, [ceza_id] = @ceza_id, [ceza_yil] = @ceza_yil WHERE (([suc_id] = @Original_suc_id) AND ((@IsNull_suc_ad = 1 AND [suc_ad] IS NULL) OR ([suc_ad] = @Original_suc_ad)) AND ((@IsNull_ceza_id = 1 AND [ceza_id] IS NULL) OR ([ceza_id] = @Original_ceza_id)) AND ((@IsNull_ceza_yil = 1 AND [ceza_yil] IS NULL) OR ([ceza_yil] = @Original_ceza_yil)));
+SELECT suc_id, suc_ad, ceza_id, ceza_yil FROM suclar WHERE (suc_id = @suc_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@suc_ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suc_ad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_suc_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suc_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suc_ad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suc_ad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_suc_ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suc_ad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="suc_id" ColumnName="suc_id" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@suc_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="suc_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="suc_id" DataSetColumn="suc_id" />
+              <Mapping SourceColumn="suc_ad" DataSetColumn="suc_ad" />
+              <Mapping SourceColumn="ceza_id" DataSetColumn="ceza_id" />
+              <Mapping SourceColumn="ceza_yil" DataSetColumn="ceza_yil" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="suclularTableAdapter" GeneratorDataComponentClassName="suclularTableAdapter" Name="suclular" UserDataComponentName="suclularTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.suclular" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[suclular] WHERE (([suclu_id] = @Original_suclu_id) AND ((@IsNull_suclu_ad = 1 AND [suclu_ad] IS NULL) OR ([suclu_ad] = @Original_suclu_ad)) AND ((@IsNull_suclu_soyad = 1 AND [suclu_soyad] IS NULL) OR ([suclu_soyad] = @Original_suclu_soyad)) AND ((@IsNull_suclu_tc = 1 AND [suclu_tc] IS NULL) OR ([suclu_tc] = @Original_suclu_tc)) AND ((@IsNull_suclu_cinsiyet = 1 AND [suclu_cinsiyet] IS NULL) OR ([suclu_cinsiyet] = @Original_suclu_cinsiyet)) AND ((@IsNull_suclu_d_tarihi = 1 AND [suclu_d_tarihi] IS NULL) OR ([suclu_d_tarihi] = @Original_suclu_d_tarihi)) AND ((@IsNull_suc_id = 1 AND [suc_id] IS NULL) OR ([suc_id] = @Original_suc_id)) AND ((@IsNull_suc_ad = 1 AND [suc_ad] IS NULL) OR ([suc_ad] = @Original_suc_ad)) AND ((@IsNull_ceza_id = 1 AND [ceza_id] IS NULL) OR ([ceza_id] = @Original_ceza_id)) AND ((@IsNull_ceza_yil = 1 AND [ceza_yil] IS NULL) OR ([ceza_yil] = @Original_ceza_yil)) AND ((@IsNull_saglik_sorun_id = 1 AND [saglik_sorun_id] IS NULL) OR ([saglik_sorun_id] = @Original_saglik_sorun_id)) AND ((@IsNull_saglik_sorun_durum = 1 AND [saglik_sorun_durum] IS NULL) OR ([saglik_sorun_durum] = @Original_saglik_sorun_durum)) AND ((@IsNull_saglik_durum_aciklama_id = 1 AND [saglik_durum_aciklama_id] IS NULL) OR ([saglik_durum_aciklama_id] = @Original_saglik_durum_aciklama_id)) AND ((@IsNull_saglik_durum_aciklama = 1 AND [saglik_durum_aciklama] IS NULL) OR ([saglik_durum_aciklama] = @Original_saglik_durum_aciklama)) AND ((@IsNull_kan_grubu = 1 AND [kan_grubu] IS NULL) OR ([kan_grubu] = @Original_kan_grubu)) AND ((@IsNull_giris_tarih = 1 AND [giris_tarih] IS NULL) OR ([giris_tarih] = @Original_giris_tarih)) AND ((@IsNull_cikis_tarih = 1 AND [cikis_tarih] IS NULL) OR ([cikis_tarih] = @Original_cikis_tarih)) AND ((@IsNull_durum_id = 1 AND [durum_id] IS NULL) OR ([durum_id] = @Original_durum_id)) AND ((@IsNull_durum = 1 AND [durum] IS NULL) OR ([durum] = @Original_durum)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_suclu_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suclu_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suclu_ad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suclu_ad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_suclu_ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suclu_ad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suclu_soyad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suclu_soyad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_suclu_soyad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suclu_soyad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suclu_tc" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suclu_tc" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_suclu_tc" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="suclu_tc" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suclu_cinsiyet" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suclu_cinsiyet" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_suclu_cinsiyet" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="suclu_cinsiyet" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suclu_d_tarihi" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suclu_d_tarihi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_suclu_d_tarihi" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="suclu_d_tarihi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suc_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suc_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_suc_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suc_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suc_ad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suc_ad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_suc_ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suc_ad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_saglik_sorun_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_sorun_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_saglik_sorun_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_sorun_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_saglik_sorun_durum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_sorun_durum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_saglik_sorun_durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="saglik_sorun_durum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_saglik_durum_aciklama_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_durum_aciklama_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_saglik_durum_aciklama_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_durum_aciklama_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_saglik_durum_aciklama" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_durum_aciklama" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_saglik_durum_aciklama" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="saglik_durum_aciklama" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_kan_grubu" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="kan_grubu" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_kan_grubu" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="kan_grubu" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_giris_tarih" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="giris_tarih" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_giris_tarih" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="giris_tarih" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_cikis_tarih" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="cikis_tarih" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_cikis_tarih" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="cikis_tarih" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_durum_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="durum_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_durum_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="durum_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_durum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="durum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="durum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[suclular] ([suclu_ad], [suclu_soyad], [suclu_tc], [suclu_cinsiyet], [suclu_d_tarihi], [suc_id], [suc_ad], [ceza_id], [ceza_yil], [saglik_sorun_id], [saglik_sorun_durum], [saglik_durum_aciklama_id], [saglik_durum_aciklama], [kan_grubu], [giris_tarih], [cikis_tarih], [durum_id], [durum]) VALUES (@suclu_ad, @suclu_soyad, @suclu_tc, @suclu_cinsiyet, @suclu_d_tarihi, @suc_id, @suc_ad, @ceza_id, @ceza_yil, @saglik_sorun_id, @saglik_sorun_durum, @saglik_durum_aciklama_id, @saglik_durum_aciklama, @kan_grubu, @giris_tarih, @cikis_tarih, @durum_id, @durum);
+SELECT suclu_id, suclu_ad, suclu_soyad, suclu_tc, suclu_cinsiyet, suclu_d_tarihi, suc_id, suc_ad, ceza_id, ceza_yil, saglik_sorun_id, saglik_sorun_durum, saglik_durum_aciklama_id, saglik_durum_aciklama, kan_grubu, giris_tarih, cikis_tarih, durum_id, durum FROM suclular WHERE (suclu_id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@suclu_ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suclu_ad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@suclu_soyad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suclu_soyad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@suclu_tc" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="suclu_tc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@suclu_cinsiyet" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="suclu_cinsiyet" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@suclu_d_tarihi" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="suclu_d_tarihi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@suc_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suc_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@suc_ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suc_ad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@saglik_sorun_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_sorun_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@saglik_sorun_durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="saglik_sorun_durum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@saglik_durum_aciklama_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_durum_aciklama_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@saglik_durum_aciklama" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="saglik_durum_aciklama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@kan_grubu" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="kan_grubu" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@giris_tarih" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="giris_tarih" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@cikis_tarih" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="cikis_tarih" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@durum_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="durum_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="durum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT suclu_id, suclu_ad, suclu_soyad, suclu_tc, suclu_cinsiyet, suclu_d_tarihi, suc_id, suc_ad, ceza_id, ceza_yil, saglik_sorun_id, saglik_sorun_durum, saglik_durum_aciklama_id, saglik_durum_aciklama, kan_grubu, giris_tarih, cikis_tarih, durum_id, durum FROM dbo.suclular</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[suclular] SET [suclu_ad] = @suclu_ad, [suclu_soyad] = @suclu_soyad, [suclu_tc] = @suclu_tc, [suclu_cinsiyet] = @suclu_cinsiyet, [suclu_d_tarihi] = @suclu_d_tarihi, [suc_id] = @suc_id, [suc_ad] = @suc_ad, [ceza_id] = @ceza_id, [ceza_yil] = @ceza_yil, [saglik_sorun_id] = @saglik_sorun_id, [saglik_sorun_durum] = @saglik_sorun_durum, [saglik_durum_aciklama_id] = @saglik_durum_aciklama_id, [saglik_durum_aciklama] = @saglik_durum_aciklama, [kan_grubu] = @kan_grubu, [giris_tarih] = @giris_tarih, [cikis_tarih] = @cikis_tarih, [durum_id] = @durum_id, [durum] = @durum WHERE (([suclu_id] = @Original_suclu_id) AND ((@IsNull_suclu_ad = 1 AND [suclu_ad] IS NULL) OR ([suclu_ad] = @Original_suclu_ad)) AND ((@IsNull_suclu_soyad = 1 AND [suclu_soyad] IS NULL) OR ([suclu_soyad] = @Original_suclu_soyad)) AND ((@IsNull_suclu_tc = 1 AND [suclu_tc] IS NULL) OR ([suclu_tc] = @Original_suclu_tc)) AND ((@IsNull_suclu_cinsiyet = 1 AND [suclu_cinsiyet] IS NULL) OR ([suclu_cinsiyet] = @Original_suclu_cinsiyet)) AND ((@IsNull_suclu_d_tarihi = 1 AND [suclu_d_tarihi] IS NULL) OR ([suclu_d_tarihi] = @Original_suclu_d_tarihi)) AND ((@IsNull_suc_id = 1 AND [suc_id] IS NULL) OR ([suc_id] = @Original_suc_id)) AND ((@IsNull_suc_ad = 1 AND [suc_ad] IS NULL) OR ([suc_ad] = @Original_suc_ad)) AND ((@IsNull_ceza_id = 1 AND [ceza_id] IS NULL) OR ([ceza_id] = @Original_ceza_id)) AND ((@IsNull_ceza_yil = 1 AND [ceza_yil] IS NULL) OR ([ceza_yil] = @Original_ceza_yil)) AND ((@IsNull_saglik_sorun_id = 1 AND [saglik_sorun_id] IS NULL) OR ([saglik_sorun_id] = @Original_saglik_sorun_id)) AND ((@IsNull_saglik_sorun_durum = 1 AND [saglik_sorun_durum] IS NULL) OR ([saglik_sorun_durum] = @Original_saglik_sorun_durum)) AND ((@IsNull_saglik_durum_aciklama_id = 1 AND [saglik_durum_aciklama_id] IS NULL) OR ([saglik_durum_aciklama_id] = @Original_saglik_durum_aciklama_id)) AND ((@IsNull_saglik_durum_aciklama = 1 AND [saglik_durum_aciklama] IS NULL) OR ([saglik_durum_aciklama] = @Original_saglik_durum_aciklama)) AND ((@IsNull_kan_grubu = 1 AND [kan_grubu] IS NULL) OR ([kan_grubu] = @Original_kan_grubu)) AND ((@IsNull_giris_tarih = 1 AND [giris_tarih] IS NULL) OR ([giris_tarih] = @Original_giris_tarih)) AND ((@IsNull_cikis_tarih = 1 AND [cikis_tarih] IS NULL) OR ([cikis_tarih] = @Original_cikis_tarih)) AND ((@IsNull_durum_id = 1 AND [durum_id] IS NULL) OR ([durum_id] = @Original_durum_id)) AND ((@IsNull_durum = 1 AND [durum] IS NULL) OR ([durum] = @Original_durum)));
+SELECT suclu_id, suclu_ad, suclu_soyad, suclu_tc, suclu_cinsiyet, suclu_d_tarihi, suc_id, suc_ad, ceza_id, ceza_yil, saglik_sorun_id, saglik_sorun_durum, saglik_durum_aciklama_id, saglik_durum_aciklama, kan_grubu, giris_tarih, cikis_tarih, durum_id, durum FROM suclular WHERE (suclu_id = @suclu_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@suclu_ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suclu_ad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@suclu_soyad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suclu_soyad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@suclu_tc" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="suclu_tc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@suclu_cinsiyet" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="suclu_cinsiyet" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@suclu_d_tarihi" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="suclu_d_tarihi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@suc_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suc_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@suc_ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suc_ad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@saglik_sorun_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_sorun_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@saglik_sorun_durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="saglik_sorun_durum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@saglik_durum_aciklama_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_durum_aciklama_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@saglik_durum_aciklama" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="saglik_durum_aciklama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@kan_grubu" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="kan_grubu" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@giris_tarih" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="giris_tarih" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@cikis_tarih" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="cikis_tarih" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@durum_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="durum_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="durum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_suclu_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suclu_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suclu_ad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suclu_ad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_suclu_ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suclu_ad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suclu_soyad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suclu_soyad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_suclu_soyad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suclu_soyad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suclu_tc" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suclu_tc" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_suclu_tc" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="suclu_tc" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suclu_cinsiyet" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suclu_cinsiyet" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_suclu_cinsiyet" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="suclu_cinsiyet" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suclu_d_tarihi" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suclu_d_tarihi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_suclu_d_tarihi" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="suclu_d_tarihi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suc_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suc_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_suc_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suc_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_suc_ad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="suc_ad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_suc_ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="suc_ad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ceza_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ceza_yil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ceza_yil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_saglik_sorun_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_sorun_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_saglik_sorun_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_sorun_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_saglik_sorun_durum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_sorun_durum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_saglik_sorun_durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="saglik_sorun_durum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_saglik_durum_aciklama_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_durum_aciklama_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_saglik_durum_aciklama_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_durum_aciklama_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_saglik_durum_aciklama" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saglik_durum_aciklama" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_saglik_durum_aciklama" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="saglik_durum_aciklama" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_kan_grubu" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="kan_grubu" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_kan_grubu" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="kan_grubu" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_giris_tarih" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="giris_tarih" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_giris_tarih" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="giris_tarih" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_cikis_tarih" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="cikis_tarih" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_cikis_tarih" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="cikis_tarih" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_durum_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="durum_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_durum_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="durum_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_durum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="durum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="durum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="suclu_id" ColumnName="suclu_id" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@suclu_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="suclu_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="suclu_id" DataSetColumn="suclu_id" />
+              <Mapping SourceColumn="suclu_ad" DataSetColumn="suclu_ad" />
+              <Mapping SourceColumn="suclu_soyad" DataSetColumn="suclu_soyad" />
+              <Mapping SourceColumn="suclu_tc" DataSetColumn="suclu_tc" />
+              <Mapping SourceColumn="suclu_cinsiyet" DataSetColumn="suclu_cinsiyet" />
+              <Mapping SourceColumn="suclu_d_tarihi" DataSetColumn="suclu_d_tarihi" />
+              <Mapping SourceColumn="suc_id" DataSetColumn="suc_id" />
+              <Mapping SourceColumn="suc_ad" DataSetColumn="suc_ad" />
+              <Mapping SourceColumn="ceza_id" DataSetColumn="ceza_id" />
+              <Mapping SourceColumn="ceza_yil" DataSetColumn="ceza_yil" />
+              <Mapping SourceColumn="saglik_sorun_id" DataSetColumn="saglik_sorun_id" />
+              <Mapping SourceColumn="saglik_sorun_durum" DataSetColumn="saglik_sorun_durum" />
+              <Mapping SourceColumn="saglik_durum_aciklama_id" DataSetColumn="saglik_durum_aciklama_id" />
+              <Mapping SourceColumn="saglik_durum_aciklama" DataSetColumn="saglik_durum_aciklama" />
+              <Mapping SourceColumn="kan_grubu" DataSetColumn="kan_grubu" />
+              <Mapping SourceColumn="giris_tarih" DataSetColumn="giris_tarih" />
+              <Mapping SourceColumn="cikis_tarih" DataSetColumn="cikis_tarih" />
+              <Mapping SourceColumn="durum_id" DataSetColumn="durum_id" />
+              <Mapping SourceColumn="durum" DataSetColumn="durum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="randevuDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="randevuDataSet" msprop:Generator_UserDSName="randevuDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="durum_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columndurum_id" msprop:Generator_ColumnPropNameInRow="durum_id" msprop:Generator_ColumnPropNameInTable="durum_idColumn" msprop:Generator_UserColumnName="durum_id" type="xs:int" />
+              <xs:element name="durum" msprop:Generator_ColumnVarNameInTable="columndurum" msprop:Generator_ColumnPropNameInRow="durum" msprop:Generator_ColumnPropNameInTable="durumColumn" msprop:Generator_UserColumnName="durum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ceza_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnceza_id" msprop:Generator_ColumnPropNameInRow="ceza_id" msprop:Generator_ColumnPropNameInTable="ceza_idColumn" msprop:Generator_UserColumnName="ceza_id" type="xs:int" />
+              <xs:element name="ceza_yil" msprop:Generator_ColumnVarNameInTable="columnceza_yil" msprop:Generator_ColumnPropNameInRow="ceza_yil" msprop:Generator_ColumnPropNameInTable="ceza_yilColumn" msprop:Generator_UserColumnName="ceza_yil" type="xs:int" minOccurs="0" />
+              <xs:element name="saglik_durum_aciklama_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnsaglik_durum_aciklama_id" msprop:Generator_ColumnPropNameInRow="saglik_durum_aciklama_id" msprop:Generator_ColumnPropNameInTable="saglik_durum_aciklama_idColumn" msprop:Generator_UserColumnName="saglik_durum_aciklama_id" type="xs:int" />
+              <xs:element name="aciklama" msprop:Generator_ColumnVarNameInTable="columnaciklama" msprop:Generator_ColumnPropNameInRow="aciklama" msprop:Generator_ColumnPropNameInTable="aciklamaColumn" msprop:Generator_UserColumnName="aciklama" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="saglik_sorun_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnsaglik_sorun_id" msprop:Generator_ColumnPropNameInRow="saglik_sorun_id" msprop:Generator_ColumnPropNameInTable="saglik_sorun_idColumn" msprop:Generator_UserColumnName="saglik_sorun_id" type="xs:int" />
+              <xs:element name="saglik_sorun_durum" msprop:Generator_ColumnVarNameInTable="columnsaglik_sorun_durum" msprop:Generator_ColumnPropNameInRow="saglik_sorun_durum" msprop:Generator_ColumnPropNameInTable="saglik_sorun_durumColumn" msprop:Generator_UserColumnName="saglik_sorun_durum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="suclu_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnsuclu_id" msprop:Generator_ColumnPropNameInRow="suclu_id" msprop:Generator_ColumnPropNameInTable="suclu_idColumn" msprop:Generator_UserColumnName="suclu_id" type="xs:int" />
+              <xs:element name="suclu_ad" msprop:Generator_ColumnVarNameInTable="columnsuclu_ad" msprop:Generator_ColumnPropNameInRow="suclu_ad" msprop:Generator_ColumnPropNameInTable="suclu_adColumn" msprop:Generator_UserColumnName="suclu_ad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="suclu_soyad" msprop:Generator_ColumnVarNameInTable="columnsuclu_soyad" msprop:Generator_ColumnPropNameInRow="suclu_soyad" msprop:Generator_ColumnPropNameInTable="suclu_soyadColumn" msprop:Generator_UserColumnName="suclu_soyad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="suclu_tc" msprop:Generator_ColumnVarNameInTable="columnsuclu_tc" msprop:Generator_ColumnPropNameInRow="suclu_tc" msprop:Generator_ColumnPropNameInTable="suclu_tcColumn" msprop:Generator_UserColumnName="suclu_tc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="suclu_cinsiyet" msprop:Generator_ColumnVarNameInTable="columnsuclu_cinsiyet" msprop:Generator_ColumnPropNameInRow="suclu_cinsiyet" msprop:Generator_ColumnPropNameInTable="suclu_cinsiyetColumn" msprop:Generator_UserColumnName="suclu_cinsiyet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="suclu_d_tarihi" msprop:Generator_ColumnVarNameInTable="columnsuclu_d_tarihi" msprop:Generator_ColumnPropNameInRow="suclu_d_tarihi" msprop:Generator_ColumnPropNameInTable="suclu_d_tarihiColumn" msprop:Generator_UserColumnName="suclu_d_tarihi" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="suc_id" msprop:Generator_ColumnVarNameInTable="columnsuc_id" msprop:Generator_ColumnPropNameInRow="suc_id" msprop:Generator_ColumnPropNameInTable="suc_idColumn" msprop:Generator_UserColumnName="suc_id" type="xs:int" minOccurs="0" />
+              <xs:element name="suc_ad" msprop:Generator_ColumnVarNameInTable="columnsuc_ad" msprop:Generator_ColumnPropNameInRow="suc_ad" msprop:Generator_ColumnPropNameInTable="suc_adColumn" msprop:Generator_UserColumnName="suc_ad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ceza_id1" msprop:Generator_ColumnVarNameInTable="columnceza_id1" msprop:Generator_ColumnPropNameInRow="ceza_id1" msprop:Generator_ColumnPropNameInTable="ceza_id1Column" msprop:Generator_UserColumnName="ceza_id1" type="xs:int" minOccurs="0" />
+              <xs:element name="ceza_yil1" msprop:Generator_ColumnVarNameInTable="columnceza_yil1" msprop:Generator_ColumnPropNameInRow="ceza_yil1" msprop:Generator_ColumnPropNameInTable="ceza_yil1Column" msprop:Generator_UserColumnName="ceza_yil1" type="xs:int" minOccurs="0" />
+              <xs:element name="saglik_sorun_id1" msprop:Generator_ColumnVarNameInTable="columnsaglik_sorun_id1" msprop:Generator_ColumnPropNameInRow="saglik_sorun_id1" msprop:Generator_ColumnPropNameInTable="saglik_sorun_id1Column" msprop:Generator_UserColumnName="saglik_sorun_id1" type="xs:int" minOccurs="0" />
+              <xs:element name="saglik_sorun_durum1" msprop:Generator_ColumnVarNameInTable="columnsaglik_sorun_durum1" msprop:Generator_ColumnPropNameInRow="saglik_sorun_durum1" msprop:Generator_ColumnPropNameInTable="saglik_sorun_durum1Column" msprop:Generator_UserColumnName="saglik_sorun_durum1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="saglik_durum_aciklama_id1" msprop:Generator_ColumnVarNameInTable="columnsaglik_durum_aciklama_id1" msprop:Generator_ColumnPropNameInRow="saglik_durum_aciklama_id1" msprop:Generator_ColumnPropNameInTable="saglik_durum_aciklama_id1Column" msprop:Generator_UserColumnName="saglik_durum_aciklama_id1" type="xs:int" minOccurs="0" />
+              <xs:element name="saglik_durum_aciklama" msprop:Generator_ColumnVarNameInTable="columnsaglik_durum_aciklama" msprop:Generator_ColumnPropNameInRow="saglik_durum_aciklama" msprop:Generator_ColumnPropNameInTable="saglik_durum_aciklamaColumn" msprop:Generator_UserColumnName="saglik_durum_aciklama" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="kan_grubu" msprop:Generator_ColumnVarNameInTable="columnkan_grubu" msprop:Generator_ColumnPropNameInRow="kan_grubu" msprop:Generator_ColumnPropNameInTable="kan_grubuColumn" msprop:Generator_UserColumnName="kan_grubu" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="giris_tarih" msprop:Generator_ColumnVarNameInTable="columngiris_tarih" msprop:Generator_ColumnPropNameInRow="giris_tarih" msprop:Generator_ColumnPropNameInTable="giris_tarihColumn" msprop:Generator_UserColumnName="giris_tarih" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cikis_tarih" msprop:Generator_ColumnVarNameInTable="columncikis_tarih" msprop:Generator_ColumnPropNameInRow="cikis_tarih" msprop:Generator_ColumnPropNameInTable="cikis_tarihColumn" msprop:Generator_UserColumnName="cikis_tarih" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="durum_id1" msprop:Generator_ColumnVarNameInTable="columndurum_id1" msprop:Generator_ColumnPropNameInRow="durum_id1" msprop:Generator_ColumnPropNameInTable="durum_id1Column" msprop:Generator_UserColumnName="durum_id1" type="xs:int" minOccurs="0" />
+              <xs:element name="durum1" msprop:Generator_ColumnVarNameInTable="columndurum1" msprop:Generator_ColumnPropNameInRow="durum1" msprop:Generator_ColumnPropNameInTable="durum1Column" msprop:Generator_UserColumnName="durum1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="suc_id1" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnsuc_id1" msprop:Generator_ColumnPropNameInRow="suc_id1" msprop:Generator_ColumnPropNameInTable="suc_id1Column" msprop:Generator_UserColumnName="suc_id1" type="xs:int" />
+              <xs:element name="suc_ad1" msprop:Generator_ColumnVarNameInTable="columnsuc_ad1" msprop:Generator_ColumnPropNameInRow="suc_ad1" msprop:Generator_ColumnPropNameInTable="suc_ad1Column" msprop:Generator_UserColumnName="suc_ad1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ceza_id2" msprop:Generator_ColumnVarNameInTable="columnceza_id2" msprop:Generator_ColumnPropNameInRow="ceza_id2" msprop:Generator_ColumnPropNameInTable="ceza_id2Column" msprop:Generator_UserColumnName="ceza_id2" type="xs:int" minOccurs="0" />
+              <xs:element name="ceza_yil2" msprop:Generator_ColumnVarNameInTable="columnceza_yil2" msprop:Generator_ColumnPropNameInRow="ceza_yil2" msprop:Generator_ColumnPropNameInTable="ceza_yil2Column" msprop:Generator_UserColumnName="ceza_yil2" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ceza" msprop:Generator_TableClassName="cezaDataTable" msprop:Generator_TableVarName="tableceza" msprop:Generator_TablePropName="ceza" msprop:Generator_RowDeletingName="cezaRowDeleting" msprop:Generator_RowChangingName="cezaRowChanging" msprop:Generator_RowEvHandlerName="cezaRowChangeEventHandler" msprop:Generator_RowDeletedName="cezaRowDeleted" msprop:Generator_UserTableName="ceza" msprop:Generator_RowChangedName="cezaRowChanged" msprop:Generator_RowEvArgName="cezaRowChangeEvent" msprop:Generator_RowClassName="cezaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ceza_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnceza_id" msprop:Generator_ColumnPropNameInRow="ceza_id" msprop:Generator_ColumnPropNameInTable="ceza_idColumn" msprop:Generator_UserColumnName="ceza_id" type="xs:int" />
+              <xs:element name="ceza_yil" msprop:Generator_ColumnVarNameInTable="columnceza_yil" msprop:Generator_ColumnPropNameInRow="ceza_yil" msprop:Generator_ColumnPropNameInTable="ceza_yilColumn" msprop:Generator_UserColumnName="ceza_yil" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="durum" msprop:Generator_TableClassName="durumDataTable" msprop:Generator_TableVarName="tabledurum" msprop:Generator_TablePropName="durum" msprop:Generator_RowDeletingName="durumRowDeleting" msprop:Generator_RowChangingName="durumRowChanging" msprop:Generator_RowEvHandlerName="durumRowChangeEventHandler" msprop:Generator_RowDeletedName="durumRowDeleted" msprop:Generator_UserTableName="durum" msprop:Generator_RowChangedName="durumRowChanged" msprop:Generator_RowEvArgName="durumRowChangeEvent" msprop:Generator_RowClassName="durumRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="durum_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columndurum_id" msprop:Generator_ColumnPropNameInRow="durum_id" msprop:Generator_ColumnPropNameInTable="durum_idColumn" msprop:Generator_UserColumnName="durum_id" type="xs:int" />
+              <xs:element name="durum" msprop:Generator_ColumnVarNameInTable="columndurum" msprop:Generator_ColumnPropNameInRow="durum" msprop:Generator_ColumnPropNameInTable="durumColumn" msprop:Generator_UserColumnName="durum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="saglik_durum_aciklama" msprop:Generator_TableClassName="saglik_durum_aciklamaDataTable" msprop:Generator_TableVarName="tablesaglik_durum_aciklama" msprop:Generator_TablePropName="saglik_durum_aciklama" msprop:Generator_RowDeletingName="saglik_durum_aciklamaRowDeleting" msprop:Generator_RowChangingName="saglik_durum_aciklamaRowChanging" msprop:Generator_RowEvHandlerName="saglik_durum_aciklamaRowChangeEventHandler" msprop:Generator_RowDeletedName="saglik_durum_aciklamaRowDeleted" msprop:Generator_UserTableName="saglik_durum_aciklama" msprop:Generator_RowChangedName="saglik_durum_aciklamaRowChanged" msprop:Generator_RowEvArgName="saglik_durum_aciklamaRowChangeEvent" msprop:Generator_RowClassName="saglik_durum_aciklamaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="saglik_durum_aciklama_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnsaglik_durum_aciklama_id" msprop:Generator_ColumnPropNameInRow="saglik_durum_aciklama_id" msprop:Generator_ColumnPropNameInTable="saglik_durum_aciklama_idColumn" msprop:Generator_UserColumnName="saglik_durum_aciklama_id" type="xs:int" />
+              <xs:element name="aciklama" msprop:Generator_ColumnVarNameInTable="columnaciklama" msprop:Generator_ColumnPropNameInRow="aciklama" msprop:Generator_ColumnPropNameInTable="aciklamaColumn" msprop:Generator_UserColumnName="aciklama" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="saglik_sorun" msprop:Generator_TableClassName="saglik_sorunDataTable" msprop:Generator_TableVarName="tablesaglik_sorun" msprop:Generator_TablePropName="saglik_sorun" msprop:Generator_RowDeletingName="saglik_sorunRowDeleting" msprop:Generator_RowChangingName="saglik_sorunRowChanging" msprop:Generator_RowEvHandlerName="saglik_sorunRowChangeEventHandler" msprop:Generator_RowDeletedName="saglik_sorunRowDeleted" msprop:Generator_UserTableName="saglik_sorun" msprop:Generator_RowChangedName="saglik_sorunRowChanged" msprop:Generator_RowEvArgName="saglik_sorunRowChangeEvent" msprop:Generator_RowClassName="saglik_sorunRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="saglik_sorun_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnsaglik_sorun_id" msprop:Generator_ColumnPropNameInRow="saglik_sorun_id" msprop:Generator_ColumnPropNameInTable="saglik_sorun_idColumn" msprop:Generator_UserColumnName="saglik_sorun_id" type="xs:int" />
+              <xs:element name="saglik_sorun_durum" msprop:Generator_ColumnVarNameInTable="columnsaglik_sorun_durum" msprop:Generator_ColumnPropNameInRow="saglik_sorun_durum" msprop:Generator_ColumnPropNameInTable="saglik_sorun_durumColumn" msprop:Generator_UserColumnName="saglik_sorun_durum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="suclar" msprop:Generator_TableClassName="suclarDataTable" msprop:Generator_TableVarName="tablesuclar" msprop:Generator_TablePropName="suclar" msprop:Generator_RowDeletingName="suclarRowDeleting" msprop:Generator_RowChangingName="suclarRowChanging" msprop:Generator_RowEvHandlerName="suclarRowChangeEventHandler" msprop:Generator_RowDeletedName="suclarRowDeleted" msprop:Generator_UserTableName="suclar" msprop:Generator_RowChangedName="suclarRowChanged" msprop:Generator_RowEvArgName="suclarRowChangeEvent" msprop:Generator_RowClassName="suclarRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="suc_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnsuc_id" msprop:Generator_ColumnPropNameInRow="suc_id" msprop:Generator_ColumnPropNameInTable="suc_idColumn" msprop:Generator_UserColumnName="suc_id" type="xs:int" />
+              <xs:element name="suc_ad" msprop:Generator_ColumnVarNameInTable="columnsuc_ad" msprop:Generator_ColumnPropNameInRow="suc_ad" msprop:Generator_ColumnPropNameInTable="suc_adColumn" msprop:Generator_UserColumnName="suc_ad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ceza_id" msprop:Generator_ColumnVarNameInTable="columnceza_id" msprop:Generator_ColumnPropNameInRow="ceza_id" msprop:Generator_ColumnPropNameInTable="ceza_idColumn" msprop:Generator_UserColumnName="ceza_id" type="xs:int" minOccurs="0" />
+              <xs:element name="ceza_yil" msprop:Generator_ColumnVarNameInTable="columnceza_yil" msprop:Generator_ColumnPropNameInRow="ceza_yil" msprop:Generator_ColumnPropNameInTable="ceza_yilColumn" msprop:Generator_UserColumnName="ceza_yil" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="suclular" msprop:Generator_TableClassName="suclularDataTable" msprop:Generator_TableVarName="tablesuclular" msprop:Generator_TablePropName="suclular" msprop:Generator_RowDeletingName="suclularRowDeleting" msprop:Generator_RowChangingName="suclularRowChanging" msprop:Generator_RowEvHandlerName="suclularRowChangeEventHandler" msprop:Generator_RowDeletedName="suclularRowDeleted" msprop:Generator_UserTableName="suclular" msprop:Generator_RowChangedName="suclularRowChanged" msprop:Generator_RowEvArgName="suclularRowChangeEvent" msprop:Generator_RowClassName="suclularRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="suclu_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnsuclu_id" msprop:Generator_ColumnPropNameInRow="suclu_id" msprop:Generator_ColumnPropNameInTable="suclu_idColumn" msprop:Generator_UserColumnName="suclu_id" type="xs:int" />
+              <xs:element name="suclu_ad" msprop:Generator_ColumnVarNameInTable="columnsuclu_ad" msprop:Generator_ColumnPropNameInRow="suclu_ad" msprop:Generator_ColumnPropNameInTable="suclu_adColumn" msprop:Generator_UserColumnName="suclu_ad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="suclu_soyad" msprop:Generator_ColumnVarNameInTable="columnsuclu_soyad" msprop:Generator_ColumnPropNameInRow="suclu_soyad" msprop:Generator_ColumnPropNameInTable="suclu_soyadColumn" msprop:Generator_UserColumnName="suclu_soyad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="suclu_tc" msprop:Generator_ColumnVarNameInTable="columnsuclu_tc" msprop:Generator_ColumnPropNameInRow="suclu_tc" msprop:Generator_ColumnPropNameInTable="suclu_tcColumn" msprop:Generator_UserColumnName="suclu_tc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="suclu_cinsiyet" msprop:Generator_ColumnVarNameInTable="columnsuclu_cinsiyet" msprop:Generator_ColumnPropNameInRow="suclu_cinsiyet" msprop:Generator_ColumnPropNameInTable="suclu_cinsiyetColumn" msprop:Generator_UserColumnName="suclu_cinsiyet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="suclu_d_tarihi" msprop:Generator_ColumnVarNameInTable="columnsuclu_d_tarihi" msprop:Generator_ColumnPropNameInRow="suclu_d_tarihi" msprop:Generator_ColumnPropNameInTable="suclu_d_tarihiColumn" msprop:Generator_UserColumnName="suclu_d_tarihi" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="suc_id" msprop:Generator_ColumnVarNameInTable="columnsuc_id" msprop:Generator_ColumnPropNameInRow="suc_id" msprop:Generator_ColumnPropNameInTable="suc_idColumn" msprop:Generator_UserColumnName="suc_id" type="xs:int" minOccurs="0" />
+              <xs:element name="suc_ad" msprop:Generator_ColumnVarNameInTable="columnsuc_ad" msprop:Generator_ColumnPropNameInRow="suc_ad" msprop:Generator_ColumnPropNameInTable="suc_adColumn" msprop:Generator_UserColumnName="suc_ad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ceza_id" msprop:Generator_ColumnVarNameInTable="columnceza_id" msprop:Generator_ColumnPropNameInRow="ceza_id" msprop:Generator_ColumnPropNameInTable="ceza_idColumn" msprop:Generator_UserColumnName="ceza_id" type="xs:int" minOccurs="0" />
+              <xs:element name="ceza_yil" msprop:Generator_ColumnVarNameInTable="columnceza_yil" msprop:Generator_ColumnPropNameInRow="ceza_yil" msprop:Generator_ColumnPropNameInTable="ceza_yilColumn" msprop:Generator_UserColumnName="ceza_yil" type="xs:int" minOccurs="0" />
+              <xs:element name="saglik_sorun_id" msprop:Generator_ColumnVarNameInTable="columnsaglik_sorun_id" msprop:Generator_ColumnPropNameInRow="saglik_sorun_id" msprop:Generator_ColumnPropNameInTable="saglik_sorun_idColumn" msprop:Generator_UserColumnName="saglik_sorun_id" type="xs:int" minOccurs="0" />
+              <xs:element name="saglik_sorun_durum" msprop:Generator_ColumnVarNameInTable="columnsaglik_sorun_durum" msprop:Generator_ColumnPropNameInRow="saglik_sorun_durum" msprop:Generator_ColumnPropNameInTable="saglik_sorun_durumColumn" msprop:Generator_UserColumnName="saglik_sorun_durum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="saglik_durum_aciklama_id" msprop:Generator_ColumnVarNameInTable="columnsaglik_durum_aciklama_id" msprop:Generator_ColumnPropNameInRow="saglik_durum_aciklama_id" msprop:Generator_ColumnPropNameInTable="saglik_durum_aciklama_idColumn" msprop:Generator_UserColumnName="saglik_durum_aciklama_id" type="xs:int" minOccurs="0" />
+              <xs:element name="saglik_durum_aciklama" msprop:Generator_ColumnVarNameInTable="columnsaglik_durum_aciklama" msprop:Generator_ColumnPropNameInRow="saglik_durum_aciklama" msprop:Generator_ColumnPropNameInTable="saglik_durum_aciklamaColumn" msprop:Generator_UserColumnName="saglik_durum_aciklama" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="kan_grubu" msprop:Generator_ColumnVarNameInTable="columnkan_grubu" msprop:Generator_ColumnPropNameInRow="kan_grubu" msprop:Generator_ColumnPropNameInTable="kan_grubuColumn" msprop:Generator_UserColumnName="kan_grubu" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="giris_tarih" msprop:Generator_ColumnVarNameInTable="columngiris_tarih" msprop:Generator_ColumnPropNameInRow="giris_tarih" msprop:Generator_ColumnPropNameInTable="giris_tarihColumn" msprop:Generator_UserColumnName="giris_tarih" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cikis_tarih" msprop:Generator_ColumnVarNameInTable="columncikis_tarih" msprop:Generator_ColumnPropNameInRow="cikis_tarih" msprop:Generator_ColumnPropNameInTable="cikis_tarihColumn" msprop:Generator_UserColumnName="cikis_tarih" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="durum_id" msprop:Generator_ColumnVarNameInTable="columndurum_id" msprop:Generator_ColumnPropNameInRow="durum_id" msprop:Generator_ColumnPropNameInTable="durum_idColumn" msprop:Generator_UserColumnName="durum_id" type="xs:int" minOccurs="0" />
+              <xs:element name="durum" msprop:Generator_ColumnVarNameInTable="columndurum" msprop:Generator_ColumnPropNameInRow="durum" msprop:Generator_ColumnPropNameInTable="durumColumn" msprop:Generator_UserColumnName="durum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:durum_id" />
+      <xs:field xpath="mstns:ceza_id" />
+      <xs:field xpath="mstns:saglik_durum_aciklama_id" />
+      <xs:field xpath="mstns:saglik_sorun_id" />
+      <xs:field xpath="mstns:suclu_id" />
+      <xs:field xpath="mstns:suc_id1" />
+    </xs:unique>
+    <xs:unique name="ceza_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ceza" />
+      <xs:field xpath="mstns:ceza_id" />
+    </xs:unique>
+    <xs:unique name="durum_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:durum" />
+      <xs:field xpath="mstns:durum_id" />
+    </xs:unique>
+    <xs:unique name="saglik_durum_aciklama_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:saglik_durum_aciklama" />
+      <xs:field xpath="mstns:saglik_durum_aciklama_id" />
+    </xs:unique>
+    <xs:unique name="saglik_sorun_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:saglik_sorun" />
+      <xs:field xpath="mstns:saglik_sorun_id" />
+    </xs:unique>
+    <xs:unique name="suclar_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:suclar" />
+      <xs:field xpath="mstns:suc_id" />
+    </xs:unique>
+    <xs:unique name="suclular_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:suclular" />
+      <xs:field xpath="mstns:suclu_id" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_suclar_ceza" msdata:parent="ceza" msdata:child="suclar" msdata:parentkey="ceza_id" msdata:childkey="ceza_id" msprop:Generator_UserChildTable="suclar" msprop:Generator_ChildPropName="GetsuclarRows" msprop:Generator_UserRelationName="FK_suclar_ceza" msprop:Generator_ParentPropName="cezaRow" msprop:Generator_RelationVarName="relationFK_suclar_ceza" msprop:Generator_UserParentTable="ceza" />
+      <msdata:Relationship name="FK_suclular_durum" msdata:parent="durum" msdata:child="suclular" msdata:parentkey="durum_id" msdata:childkey="durum_id" msprop:Generator_UserChildTable="suclular" msprop:Generator_ChildPropName="GetsuclularRows" msprop:Generator_UserRelationName="FK_suclular_durum" msprop:Generator_ParentPropName="durumRow" msprop:Generator_RelationVarName="relationFK_suclular_durum" msprop:Generator_UserParentTable="durum" />
+      <msdata:Relationship name="FK_suclular_saglik_durum_aciklama" msdata:parent="saglik_durum_aciklama" msdata:child="suclular" msdata:parentkey="saglik_durum_aciklama_id" msdata:childkey="saglik_durum_aciklama_id" msprop:Generator_UserChildTable="suclular" msprop:Generator_ChildPropName="GetsuclularRows" msprop:Generator_UserRelationName="FK_suclular_saglik_durum_aciklama" msprop:Generator_ParentPropName="saglik_durum_aciklamaRow" msprop:Generator_RelationVarName="relationFK_suclular_saglik_durum_aciklama" msprop:Generator_UserParentTable="saglik_durum_aciklama" />
+      <msdata:Relationship name="FK_suclular_saglik_sorun" msdata:parent="saglik_sorun" msdata:child="suclular" msdata:parentkey="saglik_sorun_id" msdata:childkey="saglik_sorun_id" msprop:Generator_UserChildTable="suclular" msprop:Generator_ChildPropName="GetsuclularRows" msprop:Generator_UserRelationName="FK_suclular_saglik_sorun" msprop:Generator_ParentPropName="saglik_sorunRow" msprop:Generator_RelationVarName="relationFK_suclular_saglik_sorun" msprop:Generator_UserParentTable="saglik_sorun" />
+      <msdata:Relationship name="FK_suclular_suclar" msdata:parent="suclar" msdata:child="suclular" msdata:parentkey="suc_id" msdata:childkey="suc_id" msprop:Generator_UserChildTable="suclular" msprop:Generator_ChildPropName="GetsuclularRows" msprop:Generator_UserRelationName="FK_suclular_suclar" msprop:Generator_ParentPropName="suclarRow" msprop:Generator_RelationVarName="relationFK_suclular_suclar" msprop:Generator_UserParentTable="suclar" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

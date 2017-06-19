@@ -1,0 +1,33 @@
+c:\users\acer\documents\visual studio 2010\Projects\projee\projee\bin\Debug\projee.exe.config
+c:\users\acer\documents\visual studio 2010\Projects\projee\projee\bin\Debug\projee.exe
+c:\users\acer\documents\visual studio 2010\Projects\projee\projee\bin\Debug\projee.pdb
+c:\users\acer\documents\visual studio 2010\Projects\projee\projee\obj\x86\Debug\projee.Form1.resources
+c:\users\acer\documents\visual studio 2010\Projects\projee\projee\obj\x86\Debug\projee.Properties.Resources.resources
+c:\users\acer\documents\visual studio 2010\Projects\projee\projee\obj\x86\Debug\projee.csproj.GenerateResource.Cache
+c:\users\acer\documents\visual studio 2010\Projects\projee\projee\obj\x86\Debug\projee.exe
+c:\users\acer\documents\visual studio 2010\Projects\projee\projee\obj\x86\Debug\projee.pdb
+C:\Users\ACER\Documents\Visual Studio 2010\Projects\projee\projee\obj\x86\Debug\projee.csprojResolveAssemblyReference.cache
+C:\Users\ACER\Documents\Visual Studio 2010\Projects\projee\projee\obj\x86\Debug\projee.Form2.resources
+C:\Users\ACER\Documents\Visual Studio 2010\Projects\projee\projee\obj\x86\Debug\projee.Form3.resources
+C:\Users\Administrator\Desktop\C# Okul\Projects\projeeEEEEEE\projee\bin\Debug\projee.exe.config
+C:\Users\Administrator\Desktop\C# Okul\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.exe
+C:\Users\Administrator\Desktop\C# Okul\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.pdb
+C:\Users\Administrator\Desktop\C# Okul\Projects\projeeEEEEEE\projee\bin\Debug\projee.exe
+C:\Users\Administrator\Desktop\C# Okul\Projects\projeeEEEEEE\projee\bin\Debug\projee.pdb
+C:\Users\Administrator\Desktop\C# Okul\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\C# Okul\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.Form1.resources
+C:\Users\Administrator\Desktop\C# Okul\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.Form2.resources
+C:\Users\Administrator\Desktop\C# Okul\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.Form3.resources
+C:\Users\Administrator\Desktop\C# Okul\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.Properties.Resources.resources
+C:\Users\Administrator\Desktop\C# Okul\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\C#\Projects\projeeEEEEEE\projee\bin\Debug\projee.exe.config
+C:\Users\Administrator\Desktop\C#\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.exe
+C:\Users\Administrator\Desktop\C#\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.pdb
+C:\Users\Administrator\Desktop\C#\Projects\projeeEEEEEE\projee\bin\Debug\projee.exe
+C:\Users\Administrator\Desktop\C#\Projects\projeeEEEEEE\projee\bin\Debug\projee.pdb
+C:\Users\Administrator\Desktop\C#\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\C#\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.Form1.resources
+C:\Users\Administrator\Desktop\C#\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.Form2.resources
+C:\Users\Administrator\Desktop\C#\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.Form3.resources
+C:\Users\Administrator\Desktop\C#\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.Properties.Resources.resources
+C:\Users\Administrator\Desktop\C#\Projects\projeeEEEEEE\projee\obj\x86\Debug\projee.csproj.GenerateResource.Cache
