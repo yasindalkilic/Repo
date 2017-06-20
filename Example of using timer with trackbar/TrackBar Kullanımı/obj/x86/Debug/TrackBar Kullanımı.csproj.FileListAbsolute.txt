@@ -1,0 +1,8 @@
+c:\users\administrator\documents\visual studio 2010\Projects\TrackBar Kullanımı\TrackBar Kullanımı\bin\Debug\TrackBar Kullanımı.exe
+c:\users\administrator\documents\visual studio 2010\Projects\TrackBar Kullanımı\TrackBar Kullanımı\bin\Debug\TrackBar Kullanımı.pdb
+c:\users\administrator\documents\visual studio 2010\Projects\TrackBar Kullanımı\TrackBar Kullanımı\obj\x86\Debug\TrackBar_Kullanımı.Form1.resources
+c:\users\administrator\documents\visual studio 2010\Projects\TrackBar Kullanımı\TrackBar Kullanımı\obj\x86\Debug\TrackBar_Kullanımı.Properties.Resources.resources
+c:\users\administrator\documents\visual studio 2010\Projects\TrackBar Kullanımı\TrackBar Kullanımı\obj\x86\Debug\TrackBar Kullanımı.csproj.GenerateResource.Cache
+c:\users\administrator\documents\visual studio 2010\Projects\TrackBar Kullanımı\TrackBar Kullanımı\obj\x86\Debug\TrackBar Kullanımı.exe
+c:\users\administrator\documents\visual studio 2010\Projects\TrackBar Kullanımı\TrackBar Kullanımı\obj\x86\Debug\TrackBar Kullanımı.pdb
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\TrackBar Kullanımı\TrackBar Kullanımı\obj\x86\Debug\TrackBar Kullanımı.csprojResolveAssemblyReference.cache
