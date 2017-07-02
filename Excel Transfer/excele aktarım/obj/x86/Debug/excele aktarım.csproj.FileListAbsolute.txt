@@ -1,0 +1,22 @@
+c:\users\acer\documents\visual studio 2010\Projects\excele aktarım\excele aktarım\bin\Debug\Database1.mdf
+c:\users\acer\documents\visual studio 2010\Projects\excele aktarım\excele aktarım\bin\Debug\Database1_log.ldf
+c:\users\acer\documents\visual studio 2010\Projects\excele aktarım\excele aktarım\bin\Debug\excele aktarım.exe.config
+c:\users\acer\documents\visual studio 2010\Projects\excele aktarım\excele aktarım\bin\Debug\excele aktarım.exe
+c:\users\acer\documents\visual studio 2010\Projects\excele aktarım\excele aktarım\bin\Debug\excele aktarım.pdb
+c:\users\acer\documents\visual studio 2010\Projects\excele aktarım\excele aktarım\obj\x86\Debug\excele aktarım.csproj.ResolveComReference.cache
+c:\users\acer\documents\visual studio 2010\Projects\excele aktarım\excele aktarım\obj\x86\Debug\excele_aktarım.Form1.resources
+c:\users\acer\documents\visual studio 2010\Projects\excele aktarım\excele aktarım\obj\x86\Debug\excele_aktarım.Properties.Resources.resources
+c:\users\acer\documents\visual studio 2010\Projects\excele aktarım\excele aktarım\obj\x86\Debug\excele aktarım.csproj.GenerateResource.Cache
+c:\users\acer\documents\visual studio 2010\Projects\excele aktarım\excele aktarım\obj\x86\Debug\excele aktarım.exe
+c:\users\acer\documents\visual studio 2010\Projects\excele aktarım\excele aktarım\obj\x86\Debug\excele aktarım.pdb
+C:\Users\Administrator\Desktop\C#\Projects\excele aktarım\excele aktarım\bin\Debug\excele aktarım.exe.config
+C:\Users\Administrator\Desktop\C#\Projects\excele aktarım\excele aktarım\obj\x86\Debug\excele aktarım.csproj.ResolveComReference.cache
+C:\Users\Administrator\Desktop\C#\Projects\excele aktarım\excele aktarım\obj\x86\Debug\excele aktarım.exe
+C:\Users\Administrator\Desktop\C#\Projects\excele aktarım\excele aktarım\obj\x86\Debug\excele aktarım.pdb
+C:\Users\Administrator\Desktop\C#\Projects\excele aktarım\excele aktarım\bin\Debug\Database1.mdf
+C:\Users\Administrator\Desktop\C#\Projects\excele aktarım\excele aktarım\bin\Debug\Database1_log.ldf
+C:\Users\Administrator\Desktop\C#\Projects\excele aktarım\excele aktarım\bin\Debug\excele aktarım.exe
+C:\Users\Administrator\Desktop\C#\Projects\excele aktarım\excele aktarım\bin\Debug\excele aktarım.pdb
+C:\Users\Administrator\Desktop\C#\Projects\excele aktarım\excele aktarım\obj\x86\Debug\excele_aktarım.Form1.resources
+C:\Users\Administrator\Desktop\C#\Projects\excele aktarım\excele aktarım\obj\x86\Debug\excele_aktarım.Properties.Resources.resources
+C:\Users\Administrator\Desktop\C#\Projects\excele aktarım\excele aktarım\obj\x86\Debug\excele aktarım.csproj.GenerateResource.Cache
