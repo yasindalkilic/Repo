@@ -1,0 +1,21 @@
+c:\users\acer\documents\visual studio 2010\Projects\gelisim2\gelisim2\bin\Debug\gelisim2.exe
+c:\users\acer\documents\visual studio 2010\Projects\gelisim2\gelisim2\bin\Debug\gelisim2.pdb
+c:\users\acer\documents\visual studio 2010\Projects\gelisim2\gelisim2\obj\x86\Debug\gelisim2.Form1.resources
+c:\users\acer\documents\visual studio 2010\Projects\gelisim2\gelisim2\obj\x86\Debug\gelisim2.Properties.Resources.resources
+c:\users\acer\documents\visual studio 2010\Projects\gelisim2\gelisim2\obj\x86\Debug\gelisim2.csproj.GenerateResource.Cache
+c:\users\acer\documents\visual studio 2010\Projects\gelisim2\gelisim2\obj\x86\Debug\gelisim2.exe
+c:\users\acer\documents\visual studio 2010\Projects\gelisim2\gelisim2\obj\x86\Debug\gelisim2.pdb
+c:\users\acer\documents\visual studio 2010\Projects\gelisim2\gelisim2\bin\Debug\Database1.mdf
+c:\users\acer\documents\visual studio 2010\Projects\gelisim2\gelisim2\bin\Debug\Database1_log.ldf
+c:\users\acer\documents\visual studio 2010\Projects\gelisim2\gelisim2\bin\Debug\gelisim2.exe.config
+C:\Users\Administrator\Desktop\C#\Projects\gelisim2\gelisim2\bin\Debug\gelisim2.exe.config
+C:\Users\Administrator\Desktop\C#\Projects\gelisim2\gelisim2\obj\x86\Debug\gelisim2.exe
+C:\Users\Administrator\Desktop\C#\Projects\gelisim2\gelisim2\obj\x86\Debug\gelisim2.pdb
+C:\Users\Administrator\Desktop\C#\Projects\gelisim2\gelisim2\bin\Debug\Database1.mdf
+C:\Users\Administrator\Desktop\C#\Projects\gelisim2\gelisim2\bin\Debug\Database1_log.ldf
+C:\Users\Administrator\Desktop\C#\Projects\gelisim2\gelisim2\bin\Debug\gelisim2.exe
+C:\Users\Administrator\Desktop\C#\Projects\gelisim2\gelisim2\bin\Debug\gelisim2.pdb
+C:\Users\Administrator\Desktop\C#\Projects\gelisim2\gelisim2\obj\x86\Debug\gelisim2.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\C#\Projects\gelisim2\gelisim2\obj\x86\Debug\gelisim2.Form1.resources
+C:\Users\Administrator\Desktop\C#\Projects\gelisim2\gelisim2\obj\x86\Debug\gelisim2.Properties.Resources.resources
+C:\Users\Administrator\Desktop\C#\Projects\gelisim2\gelisim2\obj\x86\Debug\gelisim2.csproj.GenerateResource.Cache
