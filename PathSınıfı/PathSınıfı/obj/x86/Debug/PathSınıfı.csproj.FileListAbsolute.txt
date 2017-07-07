@@ -1,0 +1,7 @@
+c:\users\administrator\documents\visual studio 2010\Projects\PathSınıfı\PathSınıfı\bin\Debug\PathSınıfı.exe
+c:\users\administrator\documents\visual studio 2010\Projects\PathSınıfı\PathSınıfı\bin\Debug\PathSınıfı.pdb
+c:\users\administrator\documents\visual studio 2010\Projects\PathSınıfı\PathSınıfı\obj\x86\Debug\PathSınıfı.Form1.resources
+c:\users\administrator\documents\visual studio 2010\Projects\PathSınıfı\PathSınıfı\obj\x86\Debug\PathSınıfı.Properties.Resources.resources
+c:\users\administrator\documents\visual studio 2010\Projects\PathSınıfı\PathSınıfı\obj\x86\Debug\PathSınıfı.csproj.GenerateResource.Cache
+c:\users\administrator\documents\visual studio 2010\Projects\PathSınıfı\PathSınıfı\obj\x86\Debug\PathSınıfı.exe
+c:\users\administrator\documents\visual studio 2010\Projects\PathSınıfı\PathSınıfı\obj\x86\Debug\PathSınıfı.pdb
