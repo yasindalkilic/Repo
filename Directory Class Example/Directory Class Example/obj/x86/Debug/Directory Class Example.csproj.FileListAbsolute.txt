@@ -1,0 +1,7 @@
+c:\users\administrator\documents\visual studio 2010\Projects\Directory Class Example\Directory Class Example\bin\Debug\Directory Class Example.exe
+c:\users\administrator\documents\visual studio 2010\Projects\Directory Class Example\Directory Class Example\bin\Debug\Directory Class Example.pdb
+c:\users\administrator\documents\visual studio 2010\Projects\Directory Class Example\Directory Class Example\obj\x86\Debug\Directory_Class_Example.Form1.resources
+c:\users\administrator\documents\visual studio 2010\Projects\Directory Class Example\Directory Class Example\obj\x86\Debug\Directory_Class_Example.Properties.Resources.resources
+c:\users\administrator\documents\visual studio 2010\Projects\Directory Class Example\Directory Class Example\obj\x86\Debug\Directory Class Example.csproj.GenerateResource.Cache
+c:\users\administrator\documents\visual studio 2010\Projects\Directory Class Example\Directory Class Example\obj\x86\Debug\Directory Class Example.exe
+c:\users\administrator\documents\visual studio 2010\Projects\Directory Class Example\Directory Class Example\obj\x86\Debug\Directory Class Example.pdb
